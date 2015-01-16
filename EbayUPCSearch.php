@@ -73,7 +73,7 @@
 		//Simple XML Request-response
 		$responseXML = simplexml_load_file($apicall);
 
-		if($responseXML){
+		if($responseXML->Ack != 'Failure'){
 			foreach($responseXML->ItemArray->Item as $response){
 				
 				echo '<span><b>Title: </b></span>'.$response->Title;
